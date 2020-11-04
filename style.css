@@ -121,3 +121,33 @@ body {
 .testimonial:last-child .message {
   color: hsla(217, 19%, 35%, 0.7);
 }
+
+/* *****Media queries***** */
+@media screen and (min-width: 900px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.5rem;
+  }
+
+  .testimonial:first-child {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .testimonial:nth-child(2) {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+
+  .testimonial:nth-child(3) {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .testimonial:nth-child(4) {
+    grid-area: 2 / 2 / 3 / 4;
+  }
+
+  .testimonial:last-child {
+    grid-area: 1 / 4 / 3 / 5;
+  }
+}
